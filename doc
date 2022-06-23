@@ -1,0 +1,27 @@
+Configuration Git Bash: 
+
+Pour utiliser git Bash, il faut exécuter les commandes suivantes : 
+
+Désactiver la vérification SSL : git config --global http.sslVerify false
+Configurer le nom: git config --global user.name "John Doe"
+Configurer l'adresse mail : git config --global user.email johndoe@example.com
+
+Pour récupérer un projet :
+Git clone 
+
+Pour switcher de branche: 
+git switch nom_Branche
+
+Créer une nouvelle branche (exemple « dev_bq ») et se positionner dessus
+git switch -c dev_bq
+
+Vérifie la branche et les modifications apportés 
+Git status -b
+
+Ajouter les fichiers modifiés à l'index 
+git add
+
+Effectuer le commit
+git commit
+
+git push [origin] --delete [nom-de-ma-branche]
