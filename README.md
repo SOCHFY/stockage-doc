@@ -13,11 +13,11 @@ dotnet run --project producer.csproj $(pwd)/getting-started.properties
   </ItemGroup>
 
 2- Créer un fichier properties dans le projet : 
-bootstrap.servers=
-security.protocol=SASL_SSL
-sasl.mechanisms=PLAIN
-sasl.username=< CLUSTER API KEY >
-sasl.password=< CLUSTER API SECRET >
+	bootstrap.servers=
+	security.protocol=SASL_SSL
+	sasl.mechanisms=PLAIN
+	sasl.username=< CLUSTER API KEY >
+	sasl.password=< CLUSTER API SECRET >
 
 3-Dans la classe de production:
 
