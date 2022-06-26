@@ -3,7 +3,12 @@ dotnet run --project producer.csproj $(pwd)/getting-started.properties
 
 
 
-1- Ajouter dans votre projet les dépendances (les versions sont à confirmer avec l'équipe système et réseau) : 
+
+
+
+
+
+Ajouter dans votre projet les dépendances (les versions sont à confirmer avec l'équipe système et réseau) : 
 
   <ItemGroup>
     <PackageReference Include="Confluent.Kafka" Version="1.8.2" />
@@ -12,27 +17,20 @@ dotnet run --project producer.csproj $(pwd)/getting-started.properties
     <PackageReference Include="Microsoft.Extensions.Configuration.Ini" Version="6.0.0" />
   </ItemGroup>
 
-2- Créer un fichier properties dans le projet : 
-	bootstrap.servers=
-	security.protocol=SASL_SSL
-	sasl.mechanisms=PLAIN
-	sasl.username=< CLUSTER API KEY >
-	sasl.password=< CLUSTER API SECRET >
+Créer un fichier properties dans le projet : 
+bootstrap.servers=
+security.protocol=SASL_SSL
+sasl.mechanisms=PLAIN
+sasl.username=< CLUSTER API KEY >
+sasl.password=< CLUSTER API SECRET >
 
-3-Dans la classe de production:
-
-		1ere étape:
-    
-    Instancier la classe ConfigurationBuilder qui nous permettra de lire les variables du fichier properties (dans mon cas je recuperer les variables du fichier de paramétrage passé en paramètre) :
+Dans la classe de production:
+		1ere étape: instancier la classe ConfigurationBuilder qui nous permettra de lire les variables du fichier properties (dans mon cas je recuperer les variables du fichier de paramétrage passé en paramètre) :
 	   IConfiguration configuration = new ConfigurationBuilder()
 	            .AddIniFile(args[0])
 	            .Build();
-              
-		2eme étape: 
-    Construire l'évènement 
-		
-    3eme étape: 
-      Produire le message dans le topic : 
+		2eme étape : construire l'évènement 
+		3eme étape: Produire le message dans le topic : 
 			using (var producer = new ProducerBuilder<Null, string>(
 			            configuration.AsEnumerable()).Build())
 			        {
@@ -58,6 +56,15 @@ dotnet run --project producer.csproj $(pwd)/getting-started.properties
 
 
 
+
+
+
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/108058805/175831997-eba8b925-4b55-4ae4-ac72-2d9e1b124497.png)
 
 
 
