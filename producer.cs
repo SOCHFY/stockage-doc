@@ -1,5 +1,7 @@
 using Confluent.Kafka;
 using System;
+using System.Diagnostics;
+using Classes;
 using Microsoft.Extensions.Configuration;
 
 class Producer
@@ -10,6 +12,7 @@ class Producer
         {
             Console.WriteLine("Please provide the configuration file path as a command line argument");
         }
+       
         Console.WriteLine("start process");
         IConfiguration configuration = new ConfigurationBuilder()
             .AddIniFile(args[0])
@@ -17,38 +20,32 @@ class Producer
 
         const string topic = "classification";
 
-        string[] users = { "eabara", "jsmith", "sgarcia", "jbernard", "htanaka", "awalther" };
-        string[] items = { "book", "alarm clock", "t-shirts", "gift card", "batteries" };
+        Event myEvent = new Event();
+        Guid myuuid = Guid.NewGuid();
 
-        using (var producer = new ProducerBuilder<string, string>(
+        myEvent.EventType = EventType.EVT_ACK_DESTOCKING_BEGIN;
+        myEvent.EventId = myuuid.ToString();
+
+        using (var producer = new ProducerBuilder<Null, string>(
             configuration.AsEnumerable()).Build())
         {
-            var numProduced = 0;
-            const int numMessages = 10;
-			 Console.WriteLine($"numProduced : {numProduced}");
-            for (int i = 0; i < numMessages; ++i)
-            {
-                Random rnd = new Random();
-                var user = users[rnd.Next(users.Length)];
-                var item = items[rnd.Next(items.Length)];
-
-                producer.Produce(topic, new Message<string, string> { Key = user, Value = item },
+            producer.Produce(topic, new Message<Null, string> { Value=myEvent.ToString()},
                     (deliveryReport) =>
-                    {         Console.WriteLine($"item : {item}");
+                    {   
+                        Console.WriteLine($"EventType : {myEvent.EventType}");
+                        Console.WriteLine($"EventType : {myEvent.EventId}");
                         if (deliveryReport.Error.Code != ErrorCode.NoError)
                         {
                             Console.WriteLine($"Failed to deliver message: {deliveryReport.Error.Reason}");
                         }
                         else
                         {
-                            Console.WriteLine($"Produced event to topic {topic}: key = {user,-10} value = {item}");
-                            numProduced += 1;
+                            Console.WriteLine($"Produced event to topic {topic}");
                         }
                     });
-            }
-
-            producer.Flush(TimeSpan.FromSeconds(30));
-            Console.WriteLine($"{numProduced} messages were produced to topic {topic}");
+            producer.Flush(TimeSpan.FromSeconds(10));
+            Console.WriteLine($"messages were produced to topic {topic}");
         }
     }
+
 }
