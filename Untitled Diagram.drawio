@@ -1,1 +1,66 @@
-<mxfile host="app.diagrams.net" modified="2022-06-26T20:13:21.154Z" agent="5.0 (Windows)" etag="eNpVpMSrRFk_dDMKylpi" version="20.0.3" type="github"><diagram id="YvTvfZYrYLQCqJGsnBCf" name="Page-1">7Vpbc6M2FP41frQGCZvLY5zY251udzKTNm2fMgrIoDUgKglf+ut7xMUXQVK3sbez2WYmRHzogs53Pp0jkZF7m28/SFqmP4mYZSPixNuRezcihOAAwx+D7BrEn5IGSCSPG8g5AA/8T9aAuEMrHjPVYg2khcg0L0/BSBQFi/QJRqUUm9NqS5HFJ0BJE9YDHiKa9dFfeazTBg2If8B/YDxJu5GxFzZPctpVbmeiUhqLzRHkzkfurRRCN6V8e8syY7xTuyxeeLp/MckKfU6DP9bVo5r+6C/mn2+m+PHul49qMg6aXtY0q9oJj4iXQX+zZygkpvDAqIzSkendo3kJSHM1Bi5otgPG2iYw9r5VO2e96wyp2dbgqc4zADAUlZZixW5FJiQghSig5mzJs8yCaMaTAm4jmCgDfLZmUnOg6KZ9kPM4NsPMNinX7KGkkRlzAw4JmBRVETNjA2f/WqYDtn3RjnjPDrg1EznTcgdV2gZe2BLaenQ4QdMG2BwcBHesp0fO4bYYbX0y2fd9oA0KLXP/gMVwgEXL/OB9pSnyvHb4vQ0/0WeW3QvFNRfGls9Ca5FDhcw8mNFoldQW7DiJ2ZJWNds2C1rUvqHKRoZLvjVWn9UD3nSo0yFQTrU2Ir4xcyeLRIiSFUpUMmJoKQHZlGNQtTa0kEVVZoLGCkrEMQQtHFDgYsWfwQdRWSSX4TawufWRGx7/nEc0dkIUTK5ENu6Ty2JYs9pbIXUqEgHKnB9QSwWHOp+EYa2W4xem9a5dgGmlxalYmzHNQK+bFt6rpvC1CTjDHEiWUc3XpwMMma9tei+4cY2OuxCfcoe7SNN1oalMmG5bWSTsX+MNvDjvQIWVYhKJaKw0UBGhCF6i014tPWxUZ2baXqaO73luGDh+6PpP84wqaKbqiDH+BC42rt94/Ii+lMnlZOp5FtUORgHpazN0UTCkzld8623SxH8fTh+5qiCimag5EFFzWM6S7yyghs4pm4HzH4dTPJQVfXNKrkWLNnzFcxZzioRMTFCF+9LcQxnUnYvCxFSdVjl42oKZX3NBn+c/P90KyZ6MipFam7bAglNux/1nl1P2mFjKJj7CztFPX+XhgGuEV3ONM1KtmKr0EGornfECRNltT5xTzfa0mFkO1BPpix427ECdo+bbxOzQ0IY9Z0CbQl8UNH87YxZhxHEReZ2wyZCWp91KfXHKJu9AzFFcQCwuljCFQiMuXs6OV3S5omMOj8bPUNvE3csok3gDRPcXajyUDuNryZF474Bco0ek6FpwuaQcsmBeVNs29VrKcURf2ws1CZnZEN3vIKkvmqzr/vOH8Ucz2AVXZmyF6aE4TaZD9JPptej3/1+Nrcz4lCMXD4n0Ky/A7jkbozp17U7YiJXXWkZbZmITpVRqRItCmJ2KKJ7IEX0ZW+oB8mQz3VlptoBMztdgVNWOEYPworbehil9GdH4lmTIgGScATaCay2Y7hk7lHsp4ir6zjYh2Dr5gd0Fwl6PLe9r7kNc8g6iW40qRJViWsUQ3KD/XRvd4FryIlFPa2OpgkdMgTuw4zL2MbHvIauEde1imY19mkDcYOhENxgKbdcTqvsNLJoXMP7UPsoJHeQFR/uHSZ+JoRUTkyseubrv4UDg/D1E+y1NyGYfYQ7cL5dHTmy1DcTEIET+pM+x716L3zN29ayIb8z3xEMEOxLbaThiW65/a5+Y8u8GhyWlubvbHlW727U3fS03b3CRE/fJMCNHFh/K2zvsjefyE+uEYGLvBpvX753L9zuaWp4ztTLWKx/wT4byWPtjKS9Wo/3XaBD0d5VE2dpuFvPzFvB/kUXB7eHzecPy4Z8Q3Plf</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-06-27T13:23:09.262Z" agent="5.0 (Windows)" etag="B-x60AbQPhgI6FOoHZxR" version="20.0.3" type="github">
+  <diagram id="YvTvfZYrYLQCqJGsnBCf" name="Page-1">
+    <mxGraphModel dx="2670" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qvuVs5K7FENA51VDUIs4-8" value="&lt;b&gt;Search &amp;amp; analyze&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="709" y="323.5" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-9" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://goopensource.fr/wp-content/uploads/2021/07/kibana.png;" parent="1" vertex="1">
+          <mxGeometry x="909" y="326.4" width="120" height="109.84" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvuVs5K7FENA51VDUIs4-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="929" y="381" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-10" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://user.oc-static.com/upload/2017/10/10/15076639807937_Elasticsearch-Logo-Color-V.jpg.png;" parent="1" vertex="1">
+          <mxGeometry x="679" y="330.82" width="193.8" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-11" value="&lt;b&gt;Visualize &amp;amp; manage&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="919" y="309" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-18" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png;" parent="1" vertex="1">
+          <mxGeometry x="-1" y="356.1" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-19" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.json" parent="1" vertex="1">
+          <mxGeometry x="39" y="432.20000000000005" width="40" height="35.8" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-4" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn.confluent.io/wp-content/uploads/kafka-icon-blue.jpg;" parent="1" vertex="1">
+          <mxGeometry x="279" y="432.2" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-26" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://blog.savoirfairelinux.com/fr-ca/wp-content/uploads/2017/11/Python-Logo-PNG-Image.png;" parent="1" vertex="1">
+          <mxGeometry x="-81" y="509" width="250" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-27" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.json" parent="1" vertex="1">
+          <mxGeometry x="79" y="542.2" width="40" height="35.8" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-30" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;direction=west;" parent="1" vertex="1">
+          <mxGeometry x="89" y="449" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-31" value="&lt;b&gt;Produce&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="209" y="459.15999999999997" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-32" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://images.assetsdelivery.com/compings_v2/nicescene/nicescene1712/nicescene171200013.jpg;" parent="1" vertex="1">
+          <mxGeometry x="679" y="467.5" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-33" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" parent="1" vertex="1">
+          <mxGeometry x="579" y="419.68000000000006" width="100" height="129.84" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-38" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn.confluent.io/wp-content/uploads/connector-icon-2021.png;" parent="1" vertex="1">
+          <mxGeometry x="548" y="452.5" width="89.74" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-39" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;entryX=0.92;entryY=1.217;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="qvuVs5K7FENA51VDUIs4-4" edge="1" target="qvuVs5K7FENA51VDUIs4-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="439" y="639" as="sourcePoint" />
+            <mxPoint x="469" y="487" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qvuVs5K7FENA51VDUIs4-40" value="&lt;b&gt;Sink connector&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="454" y="452.5" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
