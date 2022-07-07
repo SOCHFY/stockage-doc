@@ -2,9 +2,6 @@ using Confluent.Kafka;
 using System;
 using System.Text.Json;
 using System.Collections.Generic;
-using System.Diagnostics;
-using Classes;
-using Microsoft.Extensions.Configuration;
 
 
 using System.Threading;
@@ -27,6 +24,7 @@ class Producer
         string schemaRegistryUrl = "https://confluent.cloud/environments/env-9kwydy/schema-registry/schemas/schema_test";
         using (var schemaRegistry = new CachedSchemaRegistryClient(new SchemaRegistryConfig { Url = schemaRegistryUrl }))
 
+        Console.WriteLine("start process");
         IConfiguration configuration = new ConfigurationBuilder()
             .AddIniFile(args[0])
             .SetValueSerializer(new AvroSerializer<GenericRecord>(schemaRegistry))
