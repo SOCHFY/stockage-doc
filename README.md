@@ -1,7 +1,7 @@
 # stockage-doc
 dotnet run --project producer.csproj $(pwd)/getting-started.properties
 
-
+https://owa-ex-sxb.hd.cm-cic.fr/owa/#path=/mail
 
 
 https://cadi-kib-ece-dti.cm-cic.fr:9243/s/ocrk/app/lens#/?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'2022-06-26T17:37:23.767Z',to:'2022-07-03T08:10:58.171Z'))
