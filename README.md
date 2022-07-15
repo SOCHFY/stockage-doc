@@ -3,6 +3,9 @@ dotnet run --project producer.csproj $(pwd)/getting-started.properties
 
 https://owa-ex-sxb.hd.cm-cic.fr/owa/#path=/mail
 
+https://psrc-v6px5.westeurope.azure.confluent.cloud/subjects/
+
+6D6KWDGVY2E5O65T:8noPDAg3eDKc/3eMG6LV0NxOag7UoK+ru+/vL+xXw/PoQXcGFFoZ/TImU4v3AtwS
 
 sasl.username=YGCMMKHH7L43DF5P
 sasl.password=ZVw0FEFWEKQbjeGstBqvillXJrvbdZprR1TLvWou39NzrWYimfHIv/88pnAz/oLM
