@@ -4,9 +4,13 @@ dotnet run --project producer.csproj $(pwd)/getting-started.properties
 https://owa-ex-sxb.hd.cm-cic.fr/owa/#path=/mail
 
 
+sasl.username=YGCMMKHH7L43DF5P
+sasl.password=ZVw0FEFWEKQbjeGstBqvillXJrvbdZprR1TLvWou39NzrWYimfHIv/88pnAz/oLM
+
+
 https://cadi-kib-ece-dti.cm-cic.fr:9243/s/ocrk/app/lens#/?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'2022-06-26T17:37:23.767Z',to:'2022-07-03T08:10:58.171Z'))
 
-
+https://github.com/confluentinc/confluent-kafka-dotnet/blob/master/examples/AvroBlogExamples/Program.cs
 
 Ajouter dans votre projet les dépendances (les versions sont à confirmer avec l'équipe système et réseau) : 
 
