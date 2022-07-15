@@ -1,11 +1,10 @@
-namespace Classes;
 
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-class Event
+public class Event
 {
 
   [JsonPropertyName("trace_id")]

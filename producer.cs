@@ -1,16 +1,27 @@
 using Confluent.Kafka;
 using System;
 using System.Text.Json;
-using System.Collections.Generic;
 
+using Avro;
+using Avro.Generic;
 
 using System.Threading;
 using System.Threading.Tasks;
 using Confluent.Kafka.SyncOverAsync;
 using Confluent.SchemaRegistry;
 using Confluent.SchemaRegistry.Serdes;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic; 
+using Confluent.Kafka.SyncOverAsync;
+using Confluent.SchemaRegistry.Serdes;
+using Confluent.SchemaRegistry;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
-class Producer
+public class Producer
 {
     static void Main(string[] args)
     {
@@ -22,24 +33,14 @@ class Producer
         Console.WriteLine("\r\nStart process\r\n");
 
         string schemaRegistryUrl = "https://confluent.cloud/environments/env-9kwydy/schema-registry/schemas/schema_test";
-        using (var schemaRegistry = new CachedSchemaRegistryClient(new SchemaRegistryConfig { Url = schemaRegistryUrl }))
+        var schemaRegistry = new CachedSchemaRegistryClient(new SchemaRegistryConfig { Url = schemaRegistryUrl });
 
         Console.WriteLine("start process");
         IConfiguration configuration = new ConfigurationBuilder()
             .AddIniFile(args[0])
-            .SetValueSerializer(new AvroSerializer<GenericRecord>(schemaRegistry))
             .Build();
 
 
-    var schema = (RecordSchema)RecordSchema.Parse(
-                @"{
-                    ""type"": ""event"",
-                    ""name"": ""Sample"",
-                    ""fields"": [
-                        {""name"": ""Value"", ""type"": [""int""]}
-                    ]
-                  }"
-            );
             
             
             
@@ -48,12 +49,35 @@ class Producer
 
         string eventSerialized = JsonSerializer.Serialize(GetMockMappedEvent());
     
+        var bootstrapServers = "pkc-4nmjv.francecentral.azure.confluent.cloud:9092";
+        var security="SASL_SSL";
 
-        using (var producer = new ProducerBuilder<Null, string>(
-            configuration.AsEnumerable()).Build())
+        var config = new ProducerConfig {
+        BootstrapServers = bootstrapServers,
+        SecurityProtocol = SecurityProtocol.SaslSsl,
+        SaslMechanism = SaslMechanism.ScramSha256,
+        SaslUsername = "YGCMMKHH7L43DF5P",  
+        SaslPassword = "ZVw0FEFWEKQbjeGstBqvillXJrvbdZprR1TLvWou39NzrWYimfHIv/88pnAz/oLM",
+          
+        };
+
+        using (var producer = new ProducerBuilder<string, GenericRecord>(configuration.AsEnumerable()).SetValueSerializer(new AvroSerializer<GenericRecord>(schemaRegistry)).Build())
         {
+        var logLevelSchema = (Avro.EnumSchema)Avro.Schema.Parse(
+                    File.ReadAllText("LogLevel.asvc"));
 
-            producer.Produce(topic, new Message<Null, string> { Value=eventSerialized},
+                var logMessageSchema = (Avro.RecordSchema)Avro.Schema
+                    .Parse(File.ReadAllText("LogMessage.V1.asvc")
+                        .Replace(
+                            "MessageTypes.LogLevel", 
+                            File.ReadAllText("LogLevel.asvc")));
+
+                var record = new GenericRecord(logMessageSchema);
+                record.Add("IPS", "Souka");
+                record.Add("Message", "a test log message");
+                record.Add("Severity", new GenericEnum(logLevelSchema, "Error"));
+
+          /*  producer.Produce(topic, new Message<Null, GenericRecord> { Value=eventSerialized},
                     (deliveryReport) =>
                     {   
                         Console.WriteLine($"Message: {eventSerialized}");
@@ -69,7 +93,16 @@ class Producer
                     });
 
             producer.Flush(TimeSpan.FromSeconds(10));
-            Console.WriteLine($"\r\nMessages were produced to topic {topic} at {DateTime.Now}");
+            Console.WriteLine($"\r\nMessages were produced to topic {topic} at {DateTime.Now}");*/
+              producer
+                    .ProduceAsync("log-messages", new Message<string, GenericRecord> { Key ="A" ,Value = record})
+                    .ContinueWith(task => Console.WriteLine(
+                        task.IsFaulted
+                            ? $"error producing message: {task.Exception.Message}"
+                            : $"produced to: {task.Result.TopicPartitionOffset}"));
+               Console.WriteLine($"Message: {record}");
+               Console.WriteLine($"\r\nProduced event to topic {topic}");
+                producer.Flush(TimeSpan.FromSeconds(30));
         }
     }
 
@@ -82,7 +115,7 @@ class Producer
             SpanId = "SpanId1",
             ParentSpanId = "ParentSpanId",
             SpanType = "",
-            EventType = EventTypeEnum.EVT_ACK_DESTOCKING_BEGIN,
+            EventType = EventType.EVT_ACK_DESTOCKING_BEGIN,
             EventId = Guid.NewGuid().ToString(),
             EventDetail = "",
             DomainName = "",

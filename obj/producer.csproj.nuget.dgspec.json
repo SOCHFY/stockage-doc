@@ -50,10 +50,6 @@
               "target": "Package",
               "version": "[1.3.0, )"
             },
-            "Microsoft.Azure.Data.SchemaRegistry.ApacheAvro": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[4.0.0, )"

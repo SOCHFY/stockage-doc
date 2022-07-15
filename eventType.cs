@@ -1,6 +1,3 @@
-
-namespace Classes;
-
 using System;
 public  class  EventType 
 {
