@@ -10,6 +10,7 @@ https://psrc-v6px5.westeurope.azure.confluent.cloud/subjects/
 sasl.username=YGCMMKHH7L43DF5P
 sasl.password=ZVw0FEFWEKQbjeGstBqvillXJrvbdZprR1TLvWou39NzrWYimfHIv/88pnAz/oLM
 
+curl -s -u  6D6KWDGVY2E5O65T:8noPDAg3eDKc/3eMG6LV0NxOag7UoK+ru+/vL+xXw/PoQXcGFFoZ/TImU4v3AtwS GET https://psrc-v6px5.westeurope.azure.confluent.cloud/subjects
 
 https://cadi-kib-ece-dti.cm-cic.fr:9243/s/ocrk/app/lens#/?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'2022-06-26T17:37:23.767Z',to:'2022-07-03T08:10:58.171Z'))
 
